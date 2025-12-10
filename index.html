@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="バレンシアこども会 - スペイン・バレンシアで日本の文化を大切にし、子供たちの健やかな成長を支援する日本人コミュニティです。">
+    <meta name="keywords" content="バレンシア,こども会,日本人会,スペイン,Valencia,Japanese">
+    <title>バレンシアこども会 | Valencia Kodomo-kai</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="バレンシアこども会">
+    <meta property="og:description" content="スペイン・バレンシアで日本の文化を大切にし、子供たちの健やかな成長を支援する日本人コミュニティです。">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo/logomark.gif" alt="バレンシア日本人こども会" class="logo-img">
+                        <span class="logo-text">バレンシア日本人こども会</span>
+                    </a>
+                    <button class="navbar-toggle" id="navbarToggle" aria-label="メニューを開く">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+                <nav class="navbar-menu" id="navbarMenu">
+                    <ul class="navbar-nav">
+                        <li><a href="index.html" class="active">ホーム</a></li>
+                        <li><a href="about.html">概要・沿革</a></li>
+                        <li><a href="join.html">入会案内</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="home-content">
+                <p class="home-purpose">家庭外で日本語を使う機会をつくり日本語での総合的なコミュニケーション能力を伸ばすこと、また日本の文化・習慣への理解を促し日本人としてのアイデンティティを養うことを目的としています。</p>
+                <p class="home-meta">2009年設立 ｜ 参加児童の親による運営</p>
+
+                <div class="home-links">
+                    <a href="https://www.facebook.com/61583161837368" target="_blank" rel="noopener noreferrer" class="home-link-item">
+                        <i class="fab fa-facebook"></i>
+                        <span class="home-link-title">活動報告</span>
+                        <span class="home-link-desc">Facebookで活動の様子を発信しています</span>
+                    </a>
+                    <a href="join.html" class="home-link-item">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="home-link-title">入会案内</span>
+                        <span class="home-link-desc">入会条件・申込方法など</span>
+                    </a>
+                    <a href="about.html" class="home-link-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="home-link-title">概要・沿革</span>
+                        <span class="home-link-desc">こども会の目的・活動方針・歴史</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer site-footer-simple">
+        <div class="container">
+            <p class="copyright">&copy; 2024 バレンシア日本人こども会 ｜ <a href="http://valenciakodomokai.web.fc2.com/" target="_blank" rel="noopener noreferrer">旧ホームページ</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('.navbar');
+            const toggle = document.getElementById('navbarToggle');
+            const menu = document.getElementById('navbarMenu');
+
+            if (!navbar.contains(event.target)) {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
